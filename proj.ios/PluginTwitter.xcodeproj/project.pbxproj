@@ -7,17 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C222511BE9D4A00036534C /* FHSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2224E1BE9D4A00036534C /* FHSStream.m */; };
+		24C222521BE9D4A00036534C /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C222501BE9D4A00036534C /* FHSTwitterEngine.m */; };
+		24C222571BE9E2340036534C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C222561BE9E2340036534C /* SystemConfiguration.framework */; };
 		FAC2A8001777F9D400035D22 /* ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC2A7FF1777F9D400035D22 /* ShareTwitter.m */; };
 		FACAD88C1762C1B500D75ADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACAD88B1762C1B500D75ADE /* Foundation.framework */; };
-		FACAD8BA1762C61A00D75ADE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8A51762C61A00D75ADE /* FHSTwitterEngine.m */; };
-		FACAD8BB1762C61A00D75ADE /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8A91762C61A00D75ADE /* NSString+URLEncoding.m */; };
-		FACAD8BC1762C61A00D75ADE /* Base64TranscoderFHS.c in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8AB1762C61A00D75ADE /* Base64TranscoderFHS.c */; };
-		FACAD8BD1762C61A00D75ADE /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8AE1762C61A00D75ADE /* OAConsumer.m */; };
-		FACAD8BE1762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8B01762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.m */; };
-		FACAD8BF1762C61A00D75ADE /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8B21762C61A00D75ADE /* OAMutableURLRequest.m */; };
-		FACAD8C01762C61A00D75ADE /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8B41762C61A00D75ADE /* OARequestParameter.m */; };
-		FACAD8C11762C61A00D75ADE /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8B61762C61A00D75ADE /* OAServiceTicket.m */; };
-		FACAD8C21762C61A00D75ADE /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FACAD8B81762C61A00D75ADE /* OAToken.m */; };
 		FACAD8C41762C64100D75ADE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACAD8C31762C64100D75ADE /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,29 +28,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24C2224D1BE9D4A00036534C /* FHSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHSStream.h; path = FHSTwitterEngine/FHSTwitterEngine/FHSStream.h; sourceTree = "<group>"; };
+		24C2224E1BE9D4A00036534C /* FHSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHSStream.m; path = FHSTwitterEngine/FHSTwitterEngine/FHSStream.m; sourceTree = "<group>"; };
+		24C2224F1BE9D4A00036534C /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHSTwitterEngine.h; path = FHSTwitterEngine/FHSTwitterEngine/FHSTwitterEngine.h; sourceTree = "<group>"; };
+		24C222501BE9D4A00036534C /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHSTwitterEngine.m; path = FHSTwitterEngine/FHSTwitterEngine/FHSTwitterEngine.m; sourceTree = "<group>"; };
+		24C222541BE9DBA90036534C /* InterfaceShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceShare.h; sourceTree = "<group>"; };
+		24C222551BE9DBCE0036534C /* ShareWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWrapper.h; sourceTree = "<group>"; };
+		24C222561BE9E2340036534C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAC2A7FE1777F9D400035D22 /* ShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTwitter.h; sourceTree = "<group>"; };
 		FAC2A7FF1777F9D400035D22 /* ShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTwitter.m; sourceTree = "<group>"; };
 		FACAD8881762C1B500D75ADE /* libPluginTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginTwitter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACAD88B1762C1B500D75ADE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FACAD8A41762C61A00D75ADE /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
-		FACAD8A51762C61A00D75ADE /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
-		FACAD8A81762C61A00D75ADE /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
-		FACAD8A91762C61A00D75ADE /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
-		FACAD8AB1762C61A00D75ADE /* Base64TranscoderFHS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64TranscoderFHS.c; sourceTree = "<group>"; };
-		FACAD8AC1762C61A00D75ADE /* Base64TranscoderFHS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64TranscoderFHS.h; sourceTree = "<group>"; };
-		FACAD8AD1762C61A00D75ADE /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
-		FACAD8AE1762C61A00D75ADE /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
-		FACAD8AF1762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
-		FACAD8B01762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
-		FACAD8B11762C61A00D75ADE /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
-		FACAD8B21762C61A00D75ADE /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
-		FACAD8B31762C61A00D75ADE /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
-		FACAD8B41762C61A00D75ADE /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
-		FACAD8B51762C61A00D75ADE /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
-		FACAD8B61762C61A00D75ADE /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
-		FACAD8B71762C61A00D75ADE /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
-		FACAD8B81762C61A00D75ADE /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken.m; sourceTree = "<group>"; };
-		FACAD8B91762C61A00D75ADE /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		FACAD8C31762C64100D75ADE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACAD8CB1762C76800D75ADE /* PluginTwitter-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PluginTwitter-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C222571BE9E2340036534C /* SystemConfiguration.framework in Frameworks */,
 				FACAD8C41762C64100D75ADE /* UIKit.framework in Frameworks */,
 				FACAD88C1762C1B500D75ADE /* Foundation.framework in Frameworks */,
 			);
@@ -74,13 +57,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C2224C1BE9D48D0036534C /* FHSTwitterEngine */ = {
+			isa = PBXGroup;
+			children = (
+				24C2224D1BE9D4A00036534C /* FHSStream.h */,
+				24C2224E1BE9D4A00036534C /* FHSStream.m */,
+				24C2224F1BE9D4A00036534C /* FHSTwitterEngine.h */,
+				24C222501BE9D4A00036534C /* FHSTwitterEngine.m */,
+			);
+			name = FHSTwitterEngine;
+			sourceTree = "<group>";
+		};
 		FACAD87D1762C1B500D75ADE = {
 			isa = PBXGroup;
 			children = (
+				24C222551BE9DBCE0036534C /* ShareWrapper.h */,
+				24C222541BE9DBA90036534C /* InterfaceShare.h */,
+				24C2224C1BE9D48D0036534C /* FHSTwitterEngine */,
 				FAC2A7FE1777F9D400035D22 /* ShareTwitter.h */,
 				FAC2A7FF1777F9D400035D22 /* ShareTwitter.m */,
 				FACAD8CB1762C76800D75ADE /* PluginTwitter-Prefix.pch */,
-				FACAD8A31762C61A00D75ADE /* FHSTwitterEngine */,
 				FACAD88A1762C1B500D75ADE /* Frameworks */,
 				FACAD8891762C1B500D75ADE /* Products */,
 			);
@@ -97,60 +93,11 @@
 		FACAD88A1762C1B500D75ADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24C222561BE9E2340036534C /* SystemConfiguration.framework */,
 				FACAD8C31762C64100D75ADE /* UIKit.framework */,
 				FACAD88B1762C1B500D75ADE /* Foundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FACAD8A31762C61A00D75ADE /* FHSTwitterEngine */ = {
-			isa = PBXGroup;
-			children = (
-				FACAD8A41762C61A00D75ADE /* FHSTwitterEngine.h */,
-				FACAD8A51762C61A00D75ADE /* FHSTwitterEngine.m */,
-				FACAD8A61762C61A00D75ADE /* OAuthConsumer */,
-			);
-			path = FHSTwitterEngine;
-			sourceTree = "<group>";
-		};
-		FACAD8A61762C61A00D75ADE /* OAuthConsumer */ = {
-			isa = PBXGroup;
-			children = (
-				FACAD8A71762C61A00D75ADE /* Categories */,
-				FACAD8AA1762C61A00D75ADE /* Crytpo */,
-				FACAD8AD1762C61A00D75ADE /* OAConsumer.h */,
-				FACAD8AE1762C61A00D75ADE /* OAConsumer.m */,
-				FACAD8AF1762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.h */,
-				FACAD8B01762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.m */,
-				FACAD8B11762C61A00D75ADE /* OAMutableURLRequest.h */,
-				FACAD8B21762C61A00D75ADE /* OAMutableURLRequest.m */,
-				FACAD8B31762C61A00D75ADE /* OARequestParameter.h */,
-				FACAD8B41762C61A00D75ADE /* OARequestParameter.m */,
-				FACAD8B51762C61A00D75ADE /* OAServiceTicket.h */,
-				FACAD8B61762C61A00D75ADE /* OAServiceTicket.m */,
-				FACAD8B71762C61A00D75ADE /* OAToken.h */,
-				FACAD8B81762C61A00D75ADE /* OAToken.m */,
-				FACAD8B91762C61A00D75ADE /* OAuthConsumer.h */,
-			);
-			path = OAuthConsumer;
-			sourceTree = "<group>";
-		};
-		FACAD8A71762C61A00D75ADE /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				FACAD8A81762C61A00D75ADE /* NSString+URLEncoding.h */,
-				FACAD8A91762C61A00D75ADE /* NSString+URLEncoding.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		FACAD8AA1762C61A00D75ADE /* Crytpo */ = {
-			isa = PBXGroup;
-			children = (
-				FACAD8AB1762C61A00D75ADE /* Base64TranscoderFHS.c */,
-				FACAD8AC1762C61A00D75ADE /* Base64TranscoderFHS.h */,
-			);
-			path = Crytpo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,16 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACAD8BA1762C61A00D75ADE /* FHSTwitterEngine.m in Sources */,
-				FACAD8BB1762C61A00D75ADE /* NSString+URLEncoding.m in Sources */,
-				FACAD8BC1762C61A00D75ADE /* Base64TranscoderFHS.c in Sources */,
-				FACAD8BD1762C61A00D75ADE /* OAConsumer.m in Sources */,
-				FACAD8BE1762C61A00D75ADE /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				FACAD8BF1762C61A00D75ADE /* OAMutableURLRequest.m in Sources */,
-				FACAD8C01762C61A00D75ADE /* OARequestParameter.m in Sources */,
-				FACAD8C11762C61A00D75ADE /* OAServiceTicket.m in Sources */,
-				FACAD8C21762C61A00D75ADE /* OAToken.m in Sources */,
 				FAC2A8001777F9D400035D22 /* ShareTwitter.m in Sources */,
+				24C222521BE9D4A00036534C /* FHSTwitterEngine.m in Sources */,
+				24C222511BE9D4A00036534C /* FHSStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +224,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/PluginTwitter.dst;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -303,6 +244,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/PluginTwitter.dst;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -53,13 +53,15 @@
         [self doShare];
     } else {
         UIViewController* controller = [self getCurrentRootViewController];
-        [[FHSTwitterEngine sharedEngine]showOAuthLoginControllerFromViewController:controller withCompletion:^(BOOL success) {
+        
+        UIViewController *loginController = [[FHSTwitterEngine sharedEngine]loginControllerWithCompletionHandler:^(BOOL success)  {
             if (success) {
                 [self doShare];
             } else {
                 [ShareWrapper onShareResult:self withRet:kShareFail withMsg:@"Login Failed"];
             }
         }];
+        [controller presentViewController:loginController animated:YES completion:nil];
     }
 }
 

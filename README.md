@@ -5,6 +5,10 @@ This is fork of https://github.com/cocos2d-x/plugin-x twitter.
 
 # USAGE
 
+```
+$ ./setup.sh
+```
+
 ## iOS
 
 1. Add proj.ios/PluginTwitter.xcodeproj to your xcode project.
@@ -12,6 +16,12 @@ This is fork of https://github.com/cocos2d-x/plugin-x twitter.
 
 ## Android
 
+```sh
+$ export ANDROID_HOME="PATH/TO/ANDROID_SDK"
+$ cd proj.android
+$ ant
+$ cp bin/libPluginSocialTwitter.jar YOUR/COCOS2d_ROOT/proj.android/libs 
+```
 
 ## example
 
@@ -33,8 +43,8 @@ TShareInfo shareInfo;
 shareInfo["SharedText"] = "TWEET MESSAGE";
 shareInfo["SharedImagePath"] = SHARE_IMAGE_PATH;
 
-twitter->setCallback([](int i, std::string& s){
-    log("%i, %s", i, s.c_str());
+twitter->setCallback([](int status, std::string& msg){
+    log("%i, %s", status, msg.c_str());
 });
 twitter->share(shareInfo);
 ```

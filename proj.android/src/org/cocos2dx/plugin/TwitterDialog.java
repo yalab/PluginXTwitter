@@ -128,18 +128,15 @@ public class TwitterDialog extends Dialog {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
         	LogD("Redirecting URL " + url);
-        	
-        	if (url.startsWith(TwitterApp.CALLBACK_URL)) {
+        	if (url.startsWith("authorize")) {
+        		return false;
+          } else {
         		mListener.onComplete(url);
         		
         		TwitterDialog.this.dismiss();
         		
         		return true;
-        	}  else if (url.startsWith("authorize")) {
-        		return false;
         	}
-        	
-            return true;
         }
 
         @Override

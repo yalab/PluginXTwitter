@@ -171,23 +171,28 @@ public class ShareTwitter implements InterfaceShare {
 	};
 
 	private static void sendToTwitter() {
-		String text = mShareInfo.get(KEY_TEXT);
-		String imagePath = mShareInfo.get(KEY_IMAGE_PATH);				
-		try {
-			if(imagePath != null && imagePath.length() > 0){
-				mTwitter.updateStatus(text, imagePath);
-			}else{
-				mTwitter.updateStatus(text);	
-			}
-			LogD("Posted to Twitter!");
-			shareResult(ShareWrapper.SHARERESULT_SUCCESS, "Share succeed!");
-		} catch (Exception e) {
-			LogD("Post to Twitter failed!");
-			shareResult(ShareWrapper.SHARERESULT_FAIL, "Unknown error!");
-			e.printStackTrace();
-		}
-	}
-
+    new Thread(new Runnable() {
+        @Override
+        public void run() {    
+          String text = mShareInfo.get(KEY_TEXT);
+          String imagePath = mShareInfo.get(KEY_IMAGE_PATH);				
+          try {
+            if(imagePath != null && imagePath.length() > 0){
+              mTwitter.updateStatus(text, imagePath);
+            }else{
+              mTwitter.updateStatus(text);	
+            }
+            LogD("Posted to Twitter!");
+            shareResult(ShareWrapper.SHARERESULT_SUCCESS, "Share succeed!");
+          } catch (Exception e) {
+            LogD("Post to Twitter failed!");
+            shareResult(ShareWrapper.SHARERESULT_FAIL, "Unknown error!");
+            e.printStackTrace();
+          }
+        }
+      }).start();
+  }
+  
 	@Override
 	public String getPluginVersion() {
 		return "0.2.0";

@@ -67,9 +67,9 @@ public class TwitterApp {
 		mSecretKey	 	= secretKey;
 	
 		mHttpOauthConsumer = new CommonsHttpOAuthConsumer(mConsumerKey, mSecretKey);
-		mHttpOauthprovider = new DefaultOAuthProvider("https://twitter.com/oauth/request_token",
-													 "https://twitter.com/oauth/access_token",
-													 "https://twitter.com/oauth/authorize");
+		mHttpOauthprovider = new DefaultOAuthProvider("https://api.twitter.com/oauth/request_token",
+													 "https://api.twitter.com/oauth/access_token",
+													 "https://api.twitter.com/oauth/authorize");
 		
 		mAccessToken	= mSession.getAccessToken();
 		

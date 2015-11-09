@@ -13,6 +13,8 @@ $ ./setup.sh
 
 1. Add proj.ios/PluginTwitter.xcodeproj to your xcode project.
 2. Project Setting -> General -> Linked Framework and Libraries -> + -> libPluginTwitter.a
+3. Project Setting -> General -> Linked Framework and Libraries -> + -> Accounts.framework
+4. Project Setting -> General -> Linked Framework and Libraries -> + -> Social.framework
 
 ## Android
 

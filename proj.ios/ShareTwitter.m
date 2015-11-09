@@ -23,8 +23,9 @@
  ****************************************************************************/
 
 #import "ShareTwitter.h"
-#import "FHSTwitterEngine.h"
 #import "ShareWrapper.h"
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
 
 #define OUTPUT_LOG(...)     if (self.debug) NSLog(__VA_ARGS__);
 
@@ -35,34 +36,33 @@
 
 - (void) configDeveloperInfo : (NSMutableDictionary*) cpInfo
 {
-    NSString* appKey = [cpInfo objectForKey:@"TwitterKey"];
-    NSString* appSecret = [cpInfo objectForKey:@"TwitterSecret"];
-
-    if (nil == appKey || nil == appSecret) {
-        return;
-    }
-
-    [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:appKey andSecret:appSecret];
 }
 
 - (void) share: (NSMutableDictionary*) shareInfo
 {
     self.mShareInfo = shareInfo;
-    if ([[FHSTwitterEngine sharedEngine]isAuthorized])
-    {
-        [self doShare];
-    } else {
-        UIViewController* controller = [self getCurrentRootViewController];
-        
-        UIViewController *loginController = [[FHSTwitterEngine sharedEngine]loginControllerWithCompletionHandler:^(BOOL success)  {
-            if (success) {
-                [self doShare];
-            } else {
-                [ShareWrapper onShareResult:self withRet:kShareFail withMsg:@"Login Failed"];
-            }
-        }];
-        [controller presentViewController:loginController animated:YES completion:nil];
+    if (nil == mShareInfo) {
+        [ShareWrapper onShareResult:self withRet:kShareFail withMsg:@"Shared info error"];
+        return;
     }
+
+    NSString* strText = [mShareInfo objectForKey:@"SharedText"];
+    NSString* strImagePath = [mShareInfo objectForKey:@"SharedImagePath"];
+
+    UIViewController* controller = [self getCurrentRootViewController];
+
+    SLComposeViewController *vc = [SLComposeViewController
+                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [vc setInitialText:strText];
+    [vc addImage:[UIImage imageNamed:strImagePath]];
+    vc.completionHandler =^(SLComposeViewControllerResult res){
+        if (res == TWTweetComposeViewControllerResultDone){
+            [ShareWrapper onShareResult:self withRet:kShareFail withMsg:@"Share Canceled"];
+        } else if (res == TWTweetComposeViewControllerResultCancelled){
+            [ShareWrapper onShareResult:self withRet:kShareSuccess withMsg:@"Share Succeed"];
+        }
+    };
+    [controller presentViewController:vc animated:YES completion:nil];
 }
 
 - (void) setDebugMode: (BOOL) debug
@@ -78,36 +78,6 @@
 - (NSString*) getPluginVersion
 {
     return @"0.2.0";
-}
-
-- (void) doShare
-{
-    if (nil == mShareInfo) {
-        [ShareWrapper onShareResult:self withRet:kShareFail withMsg:@"Shared info error"];
-        return;
-    }
-
-    NSString* strText = [mShareInfo objectForKey:@"SharedText"];
-    NSString* strImagePath = [mShareInfo objectForKey:@"SharedImagePath"];
-
-    BOOL oldConfig = [UIApplication sharedApplication].networkActivityIndicatorVisible;
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    NSError* returnCode = nil;
-    if (nil != strImagePath) {
-        NSData* data = [NSData dataWithContentsOfFile:strImagePath];
-        returnCode = [[FHSTwitterEngine sharedEngine] postTweet:strText withImageData:data];
-    } else {
-        returnCode = [[FHSTwitterEngine sharedEngine]postTweet:strText];
-    }
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = oldConfig;
-
-    if (returnCode) {
-        NSString* strErrorCode = [NSString stringWithFormat:@"ErrorCode %ld", (long)returnCode.code];
-        [ShareWrapper onShareResult:self withRet:kShareFail withMsg:strErrorCode];
-    } else {
-        [ShareWrapper onShareResult:self withRet:kShareSuccess withMsg:@"Share Succeed"];
-    }
 }
 
 - (UIViewController *)getCurrentRootViewController {

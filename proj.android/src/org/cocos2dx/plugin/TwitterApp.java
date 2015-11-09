@@ -109,7 +109,10 @@ public class TwitterApp {
 		try {
 			mTwitter.updateStatus(status);
 		} catch (TwitterException e) {
-			throw e;
+      if(e.getStatusCode() == -1){
+        resetAccessToken();
+      }
+      throw e;
 		}
 	}
 	
@@ -119,6 +122,9 @@ public class TwitterApp {
 		try {	
 			mTwitter.updateStatus(update);
 		} catch (TwitterException e) {
+      if(e.getStatusCode() == -1){
+        resetAccessToken();
+      }
 			throw e;
 		}
 	}

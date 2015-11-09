@@ -135,7 +135,7 @@ public class ShareTwitter implements InterfaceShare {
 
 	@Override
 	public String getSDKVersion() {
-		return "Unknown version";
+		return "20151109";
 	}
 
 	private boolean networkReachable() {
@@ -195,6 +195,6 @@ public class ShareTwitter implements InterfaceShare {
   
 	@Override
 	public String getPluginVersion() {
-		return "0.2.0";
+		return "0.3.0";
 	}
 }

@@ -72,12 +72,12 @@
 
 - (NSString*) getSDKVersion
 {
-    return @"20130607";
+    return @"20151109";
 }
 
 - (NSString*) getPluginVersion
 {
-    return @"0.2.0";
+    return @"0.3.0";
 }
 
 - (UIViewController *)getCurrentRootViewController {
